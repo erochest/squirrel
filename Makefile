@@ -19,6 +19,9 @@ specs: build
 run:
 	${CABAL} run
 
+dbinit:
+	createuser --createdb --pwprompt squirrel
+	createdb --username=squirrel --password squirrel
 
 # docs:
 # generate api documentation
@@ -58,7 +61,7 @@ build:
 	${CABAL} build
 
 watch:
-	arion . src specs
+	watchman -- trigger Main.hs;specs 
 
 restart: distclean init build
 

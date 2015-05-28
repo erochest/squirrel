@@ -32,9 +32,11 @@ executable squirrel
                      , Spock
                      , Spock-digestive
                      , Spock-worker
+                     , bytestring
                      , optparse-applicative
-                     , persistent
-                     , persistent-postgresql
+                     , postgresql-simple
+                     , postgresql-simple-migration
+                     , users-postgresql-simple
                      , text
                      , users
                      , validate-input
